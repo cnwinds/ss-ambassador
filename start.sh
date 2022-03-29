@@ -2,7 +2,7 @@
 iptables -t nat -N SHADOWSOCKS
 
 # ss-server的访问放行
-iptables -t nat -A SHADOWSOCKS -d 167.179.102.79 -j RETURN
+iptables -t nat -A SHADOWSOCKS -d <ss-server-ip> -j RETURN
 # 局域网放行
 iptables -t nat -A SHADOWSOCKS -d 10.0.0.0/8,192.168.0.0/16 -j RETURN
 # k8s内网网段放行
